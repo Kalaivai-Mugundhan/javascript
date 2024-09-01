@@ -6,6 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    welcome to vs code
+    <h2>Inheritance</h2>
+    <p id="details"></p>
+    <script>
+            class car{
+                constructor(brand)
+                {
+                    this.carname=brand;
+                }
+                present()
+                {
+                    return ' I have a ' + this.carname;
+                }
+            }
+            class Model extends car{
+                constructor(brand, mod)
+             {
+                super(brand);
+                this.model=mod;
+             }
+             show()
+             {
+                return this.present() + ' it is a  ' + this. model
+             }
+            }
+            let mycar= new Model("Swift","Eritica") ;
+            document.getElementById("details").innerHTML= mycar.show();
+    </script>
 </body>
 </html>
